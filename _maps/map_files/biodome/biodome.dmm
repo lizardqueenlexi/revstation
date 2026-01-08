@@ -16132,8 +16132,8 @@
 /obj/effect/turf_decal/tile/blue/anticorner{
 	dir = 8
 	},
-/obj/machinery/vitals_reader/directional/west,
 /obj/machinery/defibrillator_mount/directional/south,
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "fAw" = (
@@ -60209,7 +60209,7 @@
 	dir = 4
 	},
 /obj/machinery/defibrillator_mount/directional/north,
-/obj/machinery/vitals_reader/directional/west,
+/obj/machinery/status_display/ai/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "uCO" = (
