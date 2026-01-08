@@ -5,5 +5,5 @@
 	icon_state = "strand"
 	set_items = list(
 		/obj/item/reagent_containers/hypospray/medipen/survival,
-		/obj/item/kheiral_cuffs,
+		/obj/item/clothing/accessory/kheiral_cuffs,
 		)

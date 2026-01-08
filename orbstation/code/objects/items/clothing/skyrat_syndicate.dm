@@ -62,7 +62,7 @@
 /datum/supply_pack/imports/evilfashion
 	name = "Serpent's Kiss Fashion Crate"
 	desc = "A box of the latest in imported fashion, featuring items from Cybersun and Interdyne's joint Serpent's Kiss fashion line."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(
 		/obj/item/clothing/suit/toggle/labcoat/syndielabcoat,
