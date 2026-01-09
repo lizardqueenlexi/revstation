@@ -181,10 +181,10 @@
 			dropped_thing.Shake(1, 0, 2 SECONDS, 0.3 SECONDS)
 			sleep(3 SECONDS)
 
-		if (get_turf(falling_mob) != get_turf(parent))
-			REMOVE_TRAIT(falling_mob, TRAIT_NO_TRANSFORM, REF(src))
-			falling_mob.Paralyze(17 SECONDS, ignore_canstun = TRUE) // Wow nice job
-			return
+			if (get_turf(falling_mob) != get_turf(parent))
+				REMOVE_TRAIT(falling_mob, TRAIT_NO_TRANSFORM, REF(src))
+				falling_mob.Paralyze(17 SECONDS, ignore_canstun = TRUE) // Wow nice job
+				return
 
 	dropped_thing.visible_message(span_boldwarning("[dropped_thing] falls into [parent]!"), span_userdanger("[oblivion_message]"))
 
