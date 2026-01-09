@@ -64,8 +64,20 @@
 /obj/effect/spawner/random/clothing/lizardboots
 	desc = "Finally, lizard shoes..." //I don't think this description can ever appear anyway, but just to be sure...
 
-/obj/item/soap/omega
-	grind_results = list(/datum/reagent/consumable/potato_juice = 9, /datum/reagent/consumable/ethanol/slimewine = 9, /datum/reagent/monkey_powder = 9, /datum/reagent/drug/krokodil = 9, /datum/reagent/toxin/acid/nitracid = 9, /datum/reagent/baldium = 9, /datum/reagent/consumable/ethanol/hooch = 9, /datum/reagent/bluespace = 9, /datum/reagent/drug/pumpup = 9, /datum/reagent/consumable/space_cola = 9)
+
+/obj/item/soap/omega/grind_results()
+	return list(
+		/datum/reagent/consumable/potato_juice = 9,
+		/datum/reagent/consumable/ethanol/slimewine = 9,
+		/datum/reagent/monkey_powder = 9,
+		/datum/reagent/drug/krokodil = 9,
+		/datum/reagent/toxin/acid/nitracid = 9,
+		/datum/reagent/baldium = 9,
+		/datum/reagent/consumable/ethanol/hooch = 9,
+		/datum/reagent/bluespace = 9,
+		/datum/reagent/drug/pumpup = 9,
+		/datum/reagent/consumable/space_cola = 9
+	)
 
 //The lizard tail description referenced "lizard haters", but no one here hates lizards.
 /obj/item/organ/tail/lizard

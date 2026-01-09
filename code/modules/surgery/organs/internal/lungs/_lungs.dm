@@ -845,7 +845,7 @@
 
 	QDEL_IN(holder, breath_particle.lifespan)
 
-/obj/item/organ/lungs/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/lungs/on_life(seconds_per_tick)
 	. = ..()
 	if(failed && !(organ_flags & ORGAN_FAILING))
 		failed = FALSE
@@ -1124,7 +1124,7 @@
 	icon_state = "lungs-evolved"
 
 	safe_plasma_max = 8
-	safe_co2_max = 8
+	safe_co2_max = 20
 	maxHealth = 1.2 * STANDARD_ORGAN_THRESHOLD
 	safe_oxygen_min = 8
 

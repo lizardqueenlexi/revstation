@@ -196,7 +196,7 @@
 
 /obj/item/storage/briefcase/secure/contract_killer/hacker/PopulateContents()
 	new /obj/item/clothing/gloves/chief_engineer(src)
-	new /obj/item/computer_disk/syndicate/camera_app(src)
+	new /obj/item/disk/computer/syndicate/camera_app(src)
 	new /obj/item/card/emag(src)
 	new /obj/item/card/emag/doorjack(src)
 	new /obj/item/storage/toolbox/syndicate(src) //shouldn't really fit in a briefcase, but it does anyway
