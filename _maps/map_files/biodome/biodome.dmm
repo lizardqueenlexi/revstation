@@ -54640,7 +54640,7 @@
 /area/station/command/heads_quarters/captain/private)
 "sCS" = (
 /obj/machinery/door/airlock/maintenance,
-/obj/effect/spawner/random/structure/barricade,
+/obj/effect/spawner/random/structure/barricade/crude,
 /turf/open/floor/plating,
 /area/station/maintenance/department/crew_quarters/dorms)
 "sDc" = (
@@ -58628,10 +58628,6 @@
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer,
 /turf/open/floor/iron,
 /area/station/maintenance/department/science)
-"tWK" = (
-/obj/structure/lattice,
-/turf/closed/wall/r_wall,
-/area/station/engineering/circuit_workshop)
 "tWT" = (
 /obj/structure/table,
 /obj/item/assembly/igniter{
@@ -101689,10 +101685,10 @@ qCQ
 jsF
 jsF
 cBx
-tWK
-tWK
-tWK
-tWK
+iJS
+iJS
+iJS
+iJS
 iJS
 iJS
 hoE
@@ -101944,8 +101940,8 @@ lTQ
 scp
 cBx
 vtU
-tWK
-tWK
+iJS
+iJS
 iJS
 mRU
 iSc
