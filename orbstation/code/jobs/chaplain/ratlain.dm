@@ -122,7 +122,7 @@
 	if(!rite_target)
 		return FALSE
 
-	if ((FACTION_RAT in rite_target.faction))
+	if (rite_target.has_faction(FACTION_RAT))
 		rite_target.visible_message(span_notice("[rite_target] has already received the blessing!"))
 		return FALSE
 

@@ -18,7 +18,7 @@
 	user.apply_status_effect(/datum/status_effect/pacify/visible, 30 SECONDS) // Don't miss!
 	user.adjust_brute_loss(-30)
 
-/obj/item/gun/magic/wand/pax/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/pax/zap_self(mob/living/user, suicide = FALSE)
 	playsound(user, fire_sound, 50, TRUE)
 	user.log_message("zapped [user.p_them()]self with a <b>[src]</b>", LOG_ATTACK)
 	user.visible_message(span_notice("[user] tenderly kisses [user.p_their()] own wand."))

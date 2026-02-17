@@ -11,7 +11,7 @@
 	fire_sound = 'sound/effects/magic/teleport_app.ogg'
 	max_charges = 12
 
-/obj/item/gun/magic/wand/teleport_rune/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/teleport_rune/zap_self(mob/living/user, suicide = FALSE)
 	. = ..()
 	var/obj/effect/connective_ward/rune = new(get_turf(user))
 	rune.trigger_cooldown()

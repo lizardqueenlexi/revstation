@@ -5,7 +5,7 @@
 //quirk subtype for x-card, prevents having to manually flag quirks as an x-card quirk
 /datum/quirk/xcard
 	xcard_quirk = TRUE
-	abstract_parent_type = /datum/quirk/xcard
+	abstract_type  = /datum/quirk/xcard
 	icon = FA_ICON_X //all x-card quirks use a big "X" icon for clarity
 	value = 0 //x-card quirks are always free
 

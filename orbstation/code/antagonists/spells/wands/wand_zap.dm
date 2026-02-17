@@ -11,7 +11,7 @@
 	fire_sound = 'sound/items/weapons/taser.ogg'
 	max_charges = 8
 
-/obj/item/gun/magic/wand/zap/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/zap/zap_self(mob/living/user, suicide = FALSE)
 	. = ..()
 	do_sparks(1, TRUE, src)
 	user.add_mood_event("tased", /datum/mood_event/tased)

@@ -13,7 +13,7 @@
 	fire_sound = 'sound/effects/slosh.ogg'
 	max_charges = 10
 
-/obj/item/gun/magic/wand/booze/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/booze/zap_self(mob/living/user, suicide = FALSE)
 	playsound(user, fire_sound, 50, TRUE)
 	user.log_message("zapped [user.p_them()]self with a <b>[src]</b>", LOG_ATTACK)
 	user.visible_message(span_notice("[user] puts the [src] up to [user.p_their()] mouth and starts chugging!"))

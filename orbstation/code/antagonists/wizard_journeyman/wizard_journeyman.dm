@@ -32,13 +32,13 @@ GLOBAL_LIST_EMPTY(journeymanstart)
 	. = ..()
 	var/mob/living/current = owner.current
 	ritual.Grant(current)
-	current.faction |= ROLE_WIZARD
+	current.add_faction(ROLE_WIZARD)
 
 /datum/antagonist/wizard_journeyman/remove_innate_effects(mob/living/mob_override)
 	. = ..()
 	var/mob/living/current = owner.current
 	ritual.Remove(current)
-	current.faction -= ROLE_WIZARD
+	current.remove_faction(ROLE_WIZARD)
 	UnregisterSignal(ritual, COMSIG_GRAND_RITUAL_FINAL_COMPLETE)
 
 /// On application, teleport to lair and set up

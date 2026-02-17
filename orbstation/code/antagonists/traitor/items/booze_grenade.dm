@@ -32,9 +32,10 @@
 
 	update_mob()
 	playsound(src, 'sound/effects/smoke.ogg', 50, TRUE, -3)
-	var/datum/effect_system/fluid_spread/smoke/chem/smoke = new
-	smoke.set_up(range = 4, holder = src, location = src, carry = reagents)
-	smoke.start()
+	var/smoke_amount = DIAMOND_AREA(1)
+	do_smoke(4, src, src,  reagents)
+	reagents.remove_all(smoke_amount / 24)
+
 	qdel(src)
 
 /obj/item/storage/box/syndie_kit/boozenades

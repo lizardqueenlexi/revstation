@@ -220,7 +220,7 @@
 /area/shuttle/escape)
 "fB" = (
 /obj/structure/closet/crate/medical,
-/obj/item/stack/medical/gauze/twelve,
+/obj/item/stack/medical/wrap/gauze/twelve,
 /obj/item/stack/medical/suture,
 /obj/item/stack/medical/suture,
 /obj/item/stack/medical/suture,

@@ -723,7 +723,7 @@
 		/obj/item/extinguisher/mini,
 		/obj/item/emergency_bed/silicon,
 		/obj/item/borg/cyborghug/medical,
-		/obj/item/stack/medical/gauze,
+		/obj/item/stack/medical/wrap/gauze,
 		/obj/item/stack/medical/bone_gel,
 		/obj/item/borg/apparatus/organ_storage,
 		/obj/item/borg/lollipop,
@@ -917,12 +917,12 @@
 /obj/item/robot_model/syndicate/rebuild_modules()
 	..()
 	var/mob/living/silicon/robot/cyborg = loc
-	cyborg.faction -= FACTION_SILICON //ai turrets
+	cyborg.remove_faction(FACTION_SILICON) //ai turrets
 
 /obj/item/robot_model/syndicate/remove_module(obj/item/removed_module)
 	..()
 	var/mob/living/silicon/robot/cyborg = loc
-	cyborg.faction |= FACTION_SILICON //ai is your bff now!
+	cyborg.add_faction(FACTION_SILICON) //ai is your bff now!
 
 /obj/item/robot_model/syndicate_medical
 	name = "Syndicate Medical"
@@ -939,7 +939,7 @@
 		/obj/item/crowbar/cyborg,
 		/obj/item/extinguisher/mini,
 		/obj/item/pinpointer/syndicate_cyborg,
-		/obj/item/stack/medical/gauze,
+		/obj/item/stack/medical/wrap/gauze,
 		/obj/item/stack/medical/bone_gel,
 		/obj/item/gun/medbeam,
 		/obj/item/borg/apparatus/organ_storage,

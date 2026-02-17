@@ -11,7 +11,7 @@
 	fire_sound = 'sound/effects/magic/staff_animation.ogg'
 	max_charges = 10
 
-/obj/item/gun/magic/wand/animate/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/animate/zap_self(mob/living/user, suicide = FALSE)
 	. = ..()
 	to_chat(user, span_warning("You animate one of your own possessions!"))
 	charges--
