@@ -11,7 +11,7 @@
 	fire_sound = 'sound/effects/magic/blink.ogg'
 	max_charges = 8
 
-/obj/item/gun/magic/wand/freeze/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/freeze/zap_self(mob/living/user, suicide = FALSE)
 	. = ..()
 	to_chat(user, span_warning("You freeze yourself in a block of ice!"))
 	user.apply_status_effect(/datum/status_effect/ice_block_talisman, 10 SECONDS)

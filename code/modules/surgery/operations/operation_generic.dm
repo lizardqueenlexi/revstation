@@ -131,7 +131,9 @@
 
 /datum/surgery_operation/limb/retract_skin/on_success(obj/item/bodypart/limb)
 	. = ..()
-	limb.add_surgical_state(SURGERY_SKIN_OPEN)
+	// the limb SHOULD either have unclamped or clamped vessels if we're retracting skin
+	// if it doesn't, some shenanigans happened (likely due to wounds), so we add unclamped if needed - just to be thorough
+	limb.add_surgical_state(SURGERY_SKIN_OPEN | (LIMB_HAS_SURGERY_STATE(limb, SURGERY_VESSELS_CLAMPED) ? NONE : SURGERY_VESSELS_UNCLAMPED))
 	limb.remove_surgical_state(SURGERY_SKIN_CUT)
 
 /datum/surgery_operation/limb/retract_skin/abductor
@@ -366,15 +368,15 @@
 	operation_flags = OPERATION_NO_PATIENT_REQUIRED
 	implements = list(
 		/obj/item/stack/medical/bone_gel = 1,
-		/obj/item/stack/sticky_tape/surgical = 1,
-		/obj/item/stack/sticky_tape/super = 2,
-		/obj/item/stack/sticky_tape = 3.33,
+		/obj/item/stack/medical/wrap/sticky_tape/surgical = 1,
+		/obj/item/stack/medical/wrap/sticky_tape/super = 2,
+		/obj/item/stack/medical/wrap/sticky_tape = 3.33,
 	)
 	preop_sound = list(
 		/obj/item/stack/medical/bone_gel = 'sound/misc/soggy.ogg',
-		/obj/item/stack/sticky_tape/surgical = 'sound/items/duct_tape/duct_tape_rip.ogg',
-		/obj/item/stack/sticky_tape/super = 'sound/items/duct_tape/duct_tape_rip.ogg',
-		/obj/item/stack/sticky_tape = 'sound/items/duct_tape/duct_tape_rip.ogg',
+		/obj/item/stack/medical/wrap/sticky_tape/surgical = 'sound/items/duct_tape/duct_tape_rip.ogg',
+		/obj/item/stack/medical/wrap/sticky_tape/super = 'sound/items/duct_tape/duct_tape_rip.ogg',
+		/obj/item/stack/medical/wrap/sticky_tape = 'sound/items/duct_tape/duct_tape_rip.ogg',
 	)
 	time = 4 SECONDS
 	all_surgery_states_required = SURGERY_SKIN_OPEN

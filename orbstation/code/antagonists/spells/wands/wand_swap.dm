@@ -11,7 +11,7 @@
 	fire_sound = 'sound/effects/magic/swap.ogg'
 	max_charges = 20
 
-/obj/item/gun/magic/wand/swap/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/swap/zap_self(mob/living/user, suicide = FALSE)
 	. = ..()
 	to_chat(user, span_notice("You swap places with yourself! Amazing!"))
 	var/obj/effect/particle_effect/fluid/smoke/poof_in = new (get_turf(user))

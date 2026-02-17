@@ -11,7 +11,7 @@
 	fire_sound = 'sound/effects/magic/repulse.ogg'
 	max_charges = 12
 
-/obj/item/gun/magic/wand/repulse/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/repulse/zap_self(mob/living/user, suicide = FALSE)
 	. = ..()
 	user.visible_message(span_warning("[user] blasts themself into the ground!"))
 	user.adjust_brute_loss(30)

@@ -116,13 +116,6 @@
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/iron/grimy,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
-"dy" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/marker_beacon/burgundy{
-	name = "landing marker"
-	},
-/turf/template_noop,
-/area/space/nearstation)
 "dA" = (
 /obj/structure/grille/broken,
 /obj/machinery/power/shuttle_engine/propulsion/burst{
@@ -484,6 +477,13 @@
 /obj/structure/chair/stool/bar/directional/south,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
+"mk" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/marker_beacon/burgundy{
+	name = "landing marker"
+	},
+/turf/template_noop,
+/area/space/nearstation)
 "ml" = (
 /obj/effect/turf_decal/stripes/red/corner{
 	dir = 8
@@ -1327,14 +1327,6 @@
 /obj/item/paper/crumpled/ruins/postdocs_memo,
 /turf/open/floor/iron/grimy,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
-"Fg" = (
-/obj/machinery/door/airlock/cult/unruned/friendly{
-	name = "Processing"
-	},
-/obj/structure/barricade/wooden,
-/obj/structure/barricade/wooden/crude,
-/turf/open/floor/mineral/titanium/tiled/yellow,
-/area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "Fn" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -1401,6 +1393,13 @@
 	pixel_y = 9
 	},
 /turf/open/floor/mineral/titanium/tiled/white,
+/area/ruin/space/has_grav/powered/hilbertresearchfacility)
+"GD" = (
+/obj/machinery/door/airlock/cult/unruned/friendly{
+	name = "Processing"
+	},
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/mineral/titanium/tiled/yellow,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "GP" = (
 /obj/structure/table/wood,
@@ -2084,14 +2083,6 @@
 /obj/effect/decal/cleanable/greenglow,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
-"UF" = (
-/obj/machinery/door/airlock/science{
-	name = "Xenobiology"
-	},
-/obj/structure/barricade/wooden,
-/obj/structure/barricade/wooden/crude,
-/turf/open/floor/mineral/titanium/tiled/purple,
-/area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "UH" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -2147,6 +2138,13 @@
 /obj/structure/flora/bush/sparsegrass/style_random,
 /turf/open/misc/asteroid/airless,
 /area/ruin/space)
+"Wp" = (
+/obj/machinery/door/airlock/science{
+	name = "Xenobiology"
+	},
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/mineral/titanium/tiled/purple,
+/area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "Wt" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/mineral/titanium/tiled/yellow,
@@ -2966,7 +2964,7 @@ QV
 Bo
 Bo
 lH
-dy
+mk
 Ut
 Ut
 "}
@@ -3122,7 +3120,7 @@ QV
 uX
 Bo
 lH
-dy
+mk
 Ut
 Ut
 "}
@@ -3727,7 +3725,7 @@ oL
 wa
 wa
 YL
-Fg
+GD
 zC
 Xi
 Pw
@@ -3735,7 +3733,7 @@ iS
 gv
 YG
 WY
-UF
+Wp
 Kd
 lY
 DR

@@ -12,13 +12,6 @@
 /obj/item/stack/medical/bruise_pack,
 /turf/open/floor/plating,
 /area/ruin/powered/snow_biodome)
-"ad" = (
-/obj/structure/table,
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/gauze,
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating,
-/area/ruin/powered/snow_biodome)
 "ae" = (
 /obj/machinery/power/smes,
 /turf/open/floor/plating,
@@ -258,12 +251,26 @@
 /mob/living/basic/skeleton/settler,
 /turf/open/floor/pod/dark,
 /area/ruin/powered/snow_biodome)
+"gQ" = (
+/obj/structure/table,
+/obj/item/stack/medical/wrap/gauze,
+/obj/item/stack/medical/wrap/gauze,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating,
+/area/ruin/powered/snow_biodome)
 "hr" = (
 /mob/living/basic/skeleton/settler,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
 /turf/open/floor/wood,
+/area/ruin/powered/snow_biodome)
+"hA" = (
+/obj/machinery/light/empty/directional/north,
+/obj/effect/mapping_helpers/no_lava,
+/turf/open/floor/pod/dark{
+	initial_gas_mix = "LAVALAND_ATMOS"
+	},
 /area/ruin/powered/snow_biodome)
 "og" = (
 /turf/open/floor/iron/stairs{
@@ -275,13 +282,6 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid/snow,
-/area/ruin/powered/snow_biodome)
-"pI" = (
-/obj/machinery/light/empty/directional/north,
-/obj/effect/mapping_helpers/no_lava,
-/turf/open/floor/pod/dark{
-	initial_gas_mix = "LAVALAND_ATMOS"
-	},
 /area/ruin/powered/snow_biodome)
 "qt" = (
 /obj/machinery/door/airlock/silver,
@@ -751,7 +751,7 @@ ak
 ak
 ak
 Wg
-pI
+hA
 tb
 "}
 (10,1,1) = {"
@@ -820,7 +820,7 @@ tb
 "}
 (12,1,1) = {"
 Wg
-ad
+gQ
 af
 ar
 bw
@@ -1167,7 +1167,7 @@ ak
 ak
 ak
 Wg
-pI
+hA
 tb
 "}
 (23,1,1) = {"

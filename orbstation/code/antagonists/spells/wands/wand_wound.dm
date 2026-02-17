@@ -11,7 +11,7 @@
 	fire_sound = 'sound/effects/magic/wandodeath.ogg'
 	max_charges = 5
 
-/obj/item/gun/magic/wand/wound/zap_self(mob/living/user)
+/obj/item/gun/magic/wand/wound/zap_self(mob/living/user, suicide = FALSE)
 	. = ..()
 	to_chat(user, span_boldwarning("You magically rend your own flesh!"))
 	var/obj/item/bodypart/head/numbskull = user.get_bodypart(BODY_ZONE_HEAD)
