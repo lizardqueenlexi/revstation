@@ -10519,7 +10519,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/central/greater)
 "dCr" = (
-/obj/machinery/atmospherics/pipe/smart/simple/orange/visible,
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 10
 	},
@@ -20244,6 +20243,9 @@
 	dir = 9
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/simple/orange/hidden{
+	dir = 10
+	},
 /turf/open/floor/iron,
 /area/station/engineering/storage)
 "gTD" = (
@@ -25680,6 +25682,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/atmospherics/pipe/smart/simple/orange/hidden,
 /turf/open/floor/iron,
 /area/station/engineering/storage)
 "iSu" = (
@@ -29329,6 +29332,8 @@
 /obj/structure/table,
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/power_store/cell/high/empty,
+/obj/machinery/atmospherics/pipe/smart/simple/orange/hidden,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/engineering/storage)
 "kfB" = (
@@ -34066,7 +34071,6 @@
 /turf/open/floor/iron/diagonal,
 /area/station/hallway/primary/central)
 "lEZ" = (
-/obj/machinery/atmospherics/pipe/smart/simple/orange/visible,
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 9
 	},
@@ -34683,6 +34687,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
+"lPS" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/simple/orange/hidden,
+/turf/open/floor/iron,
+/area/station/engineering/storage)
 "lPT" = (
 /obj/structure/cable,
 /obj/machinery/power/solar{
@@ -34767,6 +34778,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/smart/simple/orange/hidden,
 /turf/open/floor/iron,
 /area/station/engineering/storage)
 "lRy" = (
@@ -36754,7 +36766,6 @@
 	pixel_y = -1
 	},
 /obj/item/clothing/glasses/meson/engine,
-/obj/machinery/atmospherics/pipe/smart/simple/orange/visible,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage)
 "mzh" = (
@@ -65095,8 +65106,8 @@
 	pixel_x = -1
 	},
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/simple/orange/visible{
-	dir = 10
+/obj/machinery/atmospherics/pipe/smart/simple/orange/hidden{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage)
@@ -68922,7 +68933,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/central/greater)
 "xCG" = (
-/obj/machinery/atmospherics/pipe/smart/simple/orange/visible,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -102211,8 +102221,8 @@ myU
 lEZ
 xCG
 dCr
-jIl
-qps
+lOH
+rRv
 hNy
 cCZ
 cCZ
@@ -102466,10 +102476,10 @@ oVr
 gTu
 lRs
 iSi
-hsh
+lPS
 kfA
-lOH
-xZv
+jIl
+qps
 hNy
 cCZ
 cCZ
