@@ -1,27 +1,13 @@
+/datum/component/chasm/proc/try_climb_out(mob/living/fallen_mob)
+	if (fallen_mob.stat == DEAD)
+		return
+	to_chat(fallen_mob, span_warning("You begin trying to climb out of the chasm!"))
+	if (!do_after(fallen_mob, 10 SECONDS, get_turf(fallen_mob),
+		IGNORE_HELD_ITEM | IGNORE_INCAPACITATED | IGNORE_SLOWDOWNS, extra_checks = CALLBACK(src, PROC_REF(is_alive), fallen_mob)))
+		try_climb_out(fallen_mob) // If you're not dead you're not giving in
+		return
 
-// Orb override to climb calmly out of a chasm instead of hurling yourself in a random direction
-/obj/effect/abstract/chasm_storage/on_revive(mob/living/escapee)
-	var/turf/turf = get_turf(src)
+	storage.on_revive(fallen_mob) // This seems silly but it does what we want it to do
 
-	if(!turf.GetComponent(/datum/component/chasm))
-		return ..() // Fall back to break through the floor by flinging
-
-	var/turf/escape_turf = get_nearest_safe_turf(turf)
-	if (!escape_turf)
-		return ..() // Fall back to flinging
-
-	turf.visible_message(span_boldwarning("After a long climb, [escapee] emerges from [turf]!"))
-	escapee.forceMove(escape_turf)
-	escapee.Paralyze(5 SECONDS, TRUE)
-	UnregisterSignal(escapee, COMSIG_LIVING_REVIVE)
-
-/obj/effect/abstract/chasm_storage/proc/get_nearest_safe_turf(atom/chasm)
-	var/list/nearby_open_turfs = list()
-	for (var/turf/open/sanctuary in orange(3, chasm))
-		if (sanctuary.is_blocked_turf(exclude_mobs = FALSE) || ischasm(sanctuary) || islava(sanctuary))
-			continue
-		nearby_open_turfs += sanctuary
-
-	if (!length(nearby_open_turfs))
-		return null
-	return get_closest_atom(/turf/, nearby_open_turfs, chasm)
+/datum/component/chasm/proc/is_alive(mob/living/fallen_mob)
+	return fallen_mob.stat != DEAD

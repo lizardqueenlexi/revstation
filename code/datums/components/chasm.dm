@@ -182,9 +182,10 @@
 			dropped_thing.Shake(1, 0, 2 SECONDS, 0.3 SECONDS)
 			sleep(3 SECONDS)
 
-		if (get_turf(falling_mob) != get_turf(parent)) //ORBSTATION EDIT: indented outwards one, as the mobs might survive on orb
+		if (get_turf(falling_mob) != get_turf(parent))
 			REMOVE_TRAIT(falling_mob, TRAIT_NO_TRANSFORM, REF(src))
 			falling_mob.Paralyze(17 SECONDS, ignore_canstun = TRUE) // Wow nice job
+			LAZYREMOVE(falling_atoms, falling_ref)
 			return
 
 	dropped_thing.visible_message(span_boldwarning("[dropped_thing] falls into [parent]!"), span_userdanger("[oblivion_message]"))
@@ -226,36 +227,32 @@
 		parent.visible_message(span_boldwarning("[parent] spits out [dropped_thing]!"))
 		dropped_thing.throw_at(get_edge_target_turf(parent, pick(GLOB.alldirs)), rand(1, 10), rand(1, 10))
 
-	else if (isliving(dropped_thing))
-		on_living_fallen(dropped_thing) // ORBSTATION: it doesnt kill you any more
+	else if(isliving(dropped_thing))
+		var/mob/living/fallen_mob = dropped_thing
+		REMOVE_TRAIT(fallen_mob, TRAIT_NO_TRANSFORM, REF(src))
+		/*if (fallen_mob.stat != DEAD)
+			fallen_mob.investigate_log("has died from falling into a chasm.", INVESTIGATE_DEATHS)
+
+			fallen_mob.death(TRUE)
+			fallen_mob.apply_damage(300)*/
+
+		fallen_mob.apply_damage(20)  ///ORBSTATION EDIT: you get damaged and break your bones a bit when you fall in
+		var/mob/living/carbon/carbon_mob = fallen_mob
+		if (istype(carbon_mob))
+			var/obj/item/bodypart/wound_part = pick(carbon_mob.bodyparts)
+			if (IS_ORGANIC_LIMB(wound_part))
+				wound_part.force_wound_upwards(/datum/wound/blunt/bone/moderate)
+
+		if (fallen_mob.stat == DEAD)
+			fallen_mob.investigate_log("has died from falling into a chasm.", INVESTIGATE_DEATHS)
+
+			if(issilicon(fallen_mob))
+				//Silicons are held together by hopes and dreams, unfortunately, I'm having a nightmare
+				var/mob/living/silicon/robot/fallen_borg = fallen_mob
+				fallen_borg.mmi = null
+		else try_climb_out(fallen_mob)
 
 	LAZYREMOVE(falling_atoms, falling_ref)
-
-// ORBSTATION: hurts you and then start climbing out
-/datum/component/chasm/proc/on_living_fallen(mob/living/fallen_mob)
-	fallen_mob.apply_damage(20)
-	REMOVE_TRAIT(fallen_mob, TRAIT_NO_TRANSFORM, REF(src))
-	var/mob/living/carbon/carbon_mob = fallen_mob
-	if (istype(carbon_mob))
-		var/obj/item/bodypart/wound_part = pick(carbon_mob.bodyparts)
-		if (IS_ORGANIC_LIMB(wound_part))
-			wound_part.force_wound_upwards(/datum/wound/blunt/bone/moderate)
-	try_climb_out(fallen_mob)
-
-// ORBSTATION: start trying to climb out of this goddamn chasm
-/datum/component/chasm/proc/try_climb_out(mob/living/fallen_mob)
-	if (fallen_mob.stat == DEAD)
-		return
-	to_chat(fallen_mob, span_warning("You begin trying to climb out of the chasm!"))
-	if (!do_after(fallen_mob, 10 SECONDS, get_turf(fallen_mob),
-		IGNORE_HELD_ITEM | IGNORE_INCAPACITATED | IGNORE_SLOWDOWNS, extra_checks = CALLBACK(src, PROC_REF(is_alive), fallen_mob)))
-		try_climb_out(fallen_mob) // If you're not dead you're not giving in
-		return
-	storage.on_revive(fallen_mob) // This seems silly but it does what we want it to do
-
-// ORBSTATION: returns false if you died
-/datum/component/chasm/proc/is_alive(mob/living/fallen_mob)
-	return fallen_mob.stat != DEAD
 
 /**
  * Called when something has left the chasm depths storage.
