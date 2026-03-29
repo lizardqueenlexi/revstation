@@ -8,10 +8,10 @@
 	to_chat(target, span_userdanger("The gods have punished you for your sins!"), confidential = TRUE)
 
 ///this is the actual bolt effect and damage, made into its own proc because it is used elsewhere
-/proc/lightningbolt(mob/living/user, damage_multiplier = 1) // ORBSTATION EDIT
+/proc/lightningbolt(mob/living/user)
 	var/turf/lightning_source = get_step(get_step(user, NORTH), NORTH)
 	lightning_source.Beam(user, icon_state="lightning[rand(1,12)]", time = 5)
-	user.adjust_fire_loss(LIGHTNING_BOLT_DAMAGE * damage_multiplier) // ORBSTATION EDIT
+	user.adjust_fire_loss(LIGHTNING_BOLT_DAMAGE)
 	playsound(get_turf(user), 'sound/effects/magic/lightningbolt.ogg', 50, TRUE)
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_target = user

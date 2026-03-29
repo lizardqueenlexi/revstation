@@ -17,7 +17,7 @@
 
 /obj/item/folder/shufflelog/proc/populate()
 	if(generated) return;
-	var/datum/asset/spritesheet/sheet = get_asset_datum(/datum/asset/spritesheet/simple/paper)
+	var/datum/asset/spritesheet_batched/sheet = get_asset_datum(/datum/asset/spritesheet/simple/stamps)
 	var/cc_stamp_class = sheet.icon_class_name("stamp-centcom")
 	for(var/area/area in SStable_shuffle.did_shuffle)
 		var/obj/item/paper/pappy = new(src)

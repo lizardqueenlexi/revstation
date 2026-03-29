@@ -61,10 +61,10 @@
 	killer_dummy.dna.features["spines"] = "Aquatic"
 	killer_dummy.set_species(/datum/species/lizard)
 
-	var/icon/killer_icon = render_preview_outfit(preview_outfit, killer_dummy)
-	var/icon/killer_blood_icon = icon('icons/effects/blood.dmi', "uniformblood")
-	killer_blood_icon.Blend(BLOOD_COLOR_RED, ICON_MULTIPLY)
-	killer_icon.Blend(killer_blood_icon, ICON_OVERLAY)
+	var/datum/universal_icon/killer_icon = render_preview_outfit(preview_outfit, killer_dummy)
+	var/datum/universal_icon/killer_blood_icon = uni_icon('icons/effects/blood.dmi', "uniformblood")
+	killer_blood_icon.blend_color(BLOOD_COLOR_RED, ICON_MULTIPLY)
+	killer_icon.blend_icon(killer_blood_icon, ICON_OVERLAY)
 
 	return finish_preview_icon(killer_icon)
 

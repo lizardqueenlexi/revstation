@@ -56,6 +56,9 @@
 /// ORBSTATION: Helper to figure out if a limb is digitigrade
 #define IS_DIGITIGRADE_LIMB(limb) (limb.bodyshape & BODYSHAPE_DIGITIGRADE)
 
+/// Is the bodypart a stump
+#define IS_STUMP(limb) (limb.bodypart_flags & BODYPART_STUMP)
+
 // Flags for the bodypart_flags var on /obj/item/bodypart
 /// Bodypart cannot be dismembered or amputated
 #define BODYPART_UNREMOVABLE (1<<0)
@@ -67,6 +70,8 @@
 #define BODYPART_UNHUSKABLE (1<<3)
 /// Bodypart has never been added to a mob
 #define BODYPART_VIRGIN (1<<4)
+/// Not a full bodypart, but in fact is part of a missing limb
+#define BODYPART_STUMP (1<<5)
 
 // Bodypart change blocking flags
 ///Bodypart does not get replaced during set_species()
