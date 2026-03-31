@@ -315,9 +315,11 @@
 	run_loc_floor_bottom_left.ChangeTurf(/turf/open/chasm)
 	var/turf/open/chasm/the_hole = run_loc_floor_bottom_left
 
+	for(var/mob/living/mob_spawned in mobs_spawned)
+		mob_spawned.death()
+
 	// into the hole they go
-	for(var/mob/living/mob_spawned in mobs_spawned) ///ORBSTATION EDIT: These are all living mobs, so I cast them so we can kill them
-		mob_spawned.death() //ORBSTATION EDIT: prevents them from climbing out
+	for(var/mob/living/mob_spawned in mobs_spawned)
 		the_hole.drop(mob_spawned)
 		sleep(0.2 SECONDS) // we have to WAIT because the drop() proc sleeps.
 
@@ -334,6 +336,9 @@
 
 	// try to fish up our minded victim
 	var/atom/movable/reward = fishing_source.dispense_reward(the_hook.chasm_detritus_type, a_fisherman, the_hole)
+
+
+	//TEST_ASSERT_EQUAL(no_brain.stat, DEAD, "[no_brain] not dead")
 
 	// mobs with minds (aka players) should have precedence over any other mobs that are in the chasm
 	TEST_ASSERT_EQUAL(reward, no_brain, "Fished up [reward] ([REF(reward)]) with a rescue hook; expected to fish up [no_brain]([REF(no_brain)])")

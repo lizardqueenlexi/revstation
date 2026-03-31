@@ -9,14 +9,6 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)
-"dr" = (
-/obj/structure/table/abductor,
-/obj/item/organ/heart/gland/access{
-	pixel_x = 10
-	},
-/obj/item/organ/heart/gland/egg,
-/turf/open/floor/plating/abductor,
-/area/shuttle/escape)
 "eD" = (
 /obj/structure/chair/comfy/shuttle,
 /obj/machinery/light/directional/north,
@@ -200,6 +192,14 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape/brig)
+"IM" = (
+/obj/structure/table/abductor,
+/obj/item/organ/heart/gland/access{
+	pixel_x = 10
+	},
+/obj/item/organ/heart/gland/egg,
+/turf/open/floor/plating/abductor,
+/area/shuttle/escape)
 "JK" = (
 /obj/item/lazarus_injector,
 /obj/structure/table/abductor,
@@ -218,10 +218,6 @@
 	pixel_x = -15
 	},
 /obj/item/food/soylentgreen,
-/turf/open/floor/plating/abductor,
-/area/shuttle/escape)
-"On" = (
-/obj/machinery/stasis/survival_pod,
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)
 "OR" = (
@@ -247,11 +243,6 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)
-"Tn" = (
-/obj/structure/table/optable/abductor,
-/obj/item/surgical_drapes,
-/turf/open/floor/plating/abductor,
-/area/shuttle/escape)
 "Um" = (
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)
@@ -261,6 +252,11 @@
 /obj/item/clothing/shoes/sneakers/white,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/glasses/eyepatch,
+/turf/open/floor/plating/abductor,
+/area/shuttle/escape)
+"Vr" = (
+/obj/machinery/stasis/survival_pod,
+/obj/machinery/vitals_reader/directional/west,
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)
 "VR" = (
@@ -278,6 +274,12 @@
 /obj/item/stack/sheet/mineral/abductor{
 	amount = 50
 	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/escape)
+"Xj" = (
+/obj/structure/table/optable/abductor,
+/obj/item/surgical_drapes,
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/plating/abductor,
 /area/shuttle/escape)
 "XI" = (
@@ -492,8 +494,8 @@ Um
 Um
 vw
 nH
-On
-On
+Vr
+Vr
 Uo
 oa
 nH
@@ -518,7 +520,7 @@ jj
 Um
 Um
 GO
-Tn
+Xj
 jj
 "}
 (10,1,1) = {"
@@ -564,7 +566,7 @@ ZJ
 Um
 Um
 Um
-dr
+IM
 jj
 "}
 (12,1,1) = {"

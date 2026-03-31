@@ -22,12 +22,7 @@
 	var/colorless_layer = EXTERNAL_FRONT
 
 /datum/bodypart_overlay/mutant/snout_rat/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner)
-	var/mob/living/carbon/human/human = bodypart_owner.owner
-	if(!istype(human))
-		return TRUE
-	if((human.head?.flags_inv & HIDESNOUT) || (human.wear_mask?.flags_inv & HIDESNOUT))
-		return FALSE
-	return TRUE
+	return ..() && !(bodypart_owner.owner?.obscured_slots & HIDESNOUT)
 
 /datum/bodypart_overlay/mutant/snout_rat/color_image(image/overlay, draw_layer, obj/item/bodypart/limb)
 	if(draw_layer != bitflag_to_layer(colorless_layer))

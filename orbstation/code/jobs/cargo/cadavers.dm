@@ -11,7 +11,7 @@
 	///Percent chance for a medical cadaver to be replaced with a vampire
 	var/vampire_chance = 1
 
-/datum/supply_pack/medical/cadaver/generate()
+/datum/supply_pack/medical/cadaver/generate(atom/A, datum/bank_account/paying_account, crate_override)
 	. = ..()
 	var/mob/living/carbon/human/corpse = locate() in .
 	if(vampire_arrived || !prob(vampire_chance))
@@ -49,7 +49,7 @@
 	contains = list(/mob/living/carbon/human/species/ethereal)
 
 // Remove the crystal core, both so the ethereal doesn't regenerate and so the crew can't bulk-order crystal cores
-/datum/supply_pack/medical/cadaver/ethereal/generate()
+/datum/supply_pack/medical/cadaver/ethereal/generate(atom/A, datum/bank_account/paying_account, crate_override)
 	. = ..()
 	var/mob/living/carbon/human/corpse = locate() in .
 	for (var/obj/item/organ/heart/ethereal/illegal_heart in corpse.organs)

@@ -32,50 +32,6 @@
 		human_target.ignite_mob()
 		human_target.apply_status_effect(/datum/status_effect/temporary_damned_halo)
 
-// "Holy weapon" element. Gives the attached item a chance to strike a victim with lightning if they have the "Damned" trait.
-
-#define DEFAULT_LIGHTNING_MESSAGE span_danger("%VICTIM is struck down by a bolt of holy lightning!")
-
-/datum/element/holy_weapon
-	element_flags = ELEMENT_BESPOKE
-	argument_hash_start_idx = 2
-	/// Chance of the target being struck by lightning if they have the "Damned" trait.
-	var/lightning_chance
-	/// Multiplier for the burn damage done by the lightning strike, as defined by LIGHTNING_BOLT_DAMAGE (75). Defaults to 10%, or 7.5 damage.
-	var/lightning_damage_multiplier
-	/// Message displayed to viewers when the lightning strike procs.
-	var/lightning_message
-
-/datum/element/holy_weapon/Attach(datum/target, lightning_chance = 50, lightning_damage_multiplier = 0.10, lightning_message = DEFAULT_LIGHTNING_MESSAGE)
-	. = ..()
-	if(!isitem(target))
-		return ELEMENT_INCOMPATIBLE
-	src.lightning_chance = lightning_chance
-	src.lightning_damage_multiplier = lightning_damage_multiplier
-	src.lightning_message = lightning_message
-	RegisterSignal(target, COMSIG_ITEM_ATTACK, PROC_REF(on_attack))
-
-/datum/element/holy_weapon/Detach(datum/target)
-	. = ..()
-	UnregisterSignal(target, list(COMSIG_ITEM_ATTACK))
-
-/datum/element/holy_weapon/proc/on_attack(datum/target, mob/living/victim, mob/living/attacker)
-	SIGNAL_HANDLER
-
-	if(!HAS_TRAIT(victim, TRAIT_DAMNED) || !prob(lightning_chance) || victim.stat == DEAD)
-		return
-
-	lightningbolt(victim, lightning_damage_multiplier)
-	var/built_lightning_message = replacetext(lightning_message, "%VICTIM", victim)
-	victim.visible_message(built_lightning_message)
-	victim.apply_status_effect(/datum/status_effect/temporary_damned_halo)
-
-#undef DEFAULT_LIGHTNING_MESSAGE
-
-/obj/item/nullrod/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/holy_weapon)
-
 // Holy book blessing effect
 
 /obj/item/book/bible/bless(mob/living/L, mob/living/user)

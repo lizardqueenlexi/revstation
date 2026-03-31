@@ -14,7 +14,7 @@
 
 SUBSYSTEM_DEF(automapper)
 	name = "Automapper"
-	flags = SS_NO_FIRE | SS_NO_INIT
+	ss_flags = SS_NO_FIRE | SS_NO_INIT
 	dependencies = list(
 		/datum/controller/subsystem/atoms,
 		/datum/controller/subsystem/mapping

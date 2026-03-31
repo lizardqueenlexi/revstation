@@ -34,7 +34,7 @@
 // Global var is named SStable_shuffle
 SUBSYSTEM_DEF(table_shuffle)
 	name = "Table Shuffle"
-	flags = SS_NO_FIRE
+	ss_flags = SS_NO_FIRE
 	dependencies = list(
 		/datum/controller/subsystem/atoms,
 		/datum/controller/subsystem/mapping
