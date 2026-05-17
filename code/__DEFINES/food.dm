@@ -96,7 +96,6 @@ DEFINE_BITFIELD(foodtypes, list(
 	"Gore", \
 	"Rocks", \
 	"Eggs", \
-	"Cucumbers", \
 )
 
 /// Food types assigned to all podperson organs
