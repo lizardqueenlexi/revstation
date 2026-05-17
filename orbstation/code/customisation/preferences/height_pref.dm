@@ -22,11 +22,3 @@
 
 /datum/preference/choiced/height/apply_to_human(mob/living/carbon/human/target, value)
 	target.set_mob_height(height_list[value])
-
-//Adds height to the changeling profile so that all changeling disguises forever are not blown.
-/datum/changeling_profile
-	var/height
-
-/datum/changeling_profile/copy_profile(datum/changeling_profile/new_profile)
-	..()
-	new_profile.height = height

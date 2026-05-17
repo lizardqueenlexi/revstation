@@ -19,7 +19,9 @@
 #define BUGS (1<<18)
 #define GORE (1<<19)
 #define STONE (1<<20)
-#define CUCUMBER (1<<21)
+#define EGG (1<<21)
+
+#define CUCUMBER (1<<22) //ORBSTATION EDIT
 
 DEFINE_BITFIELD(foodtypes, list(
 	"MEAT" = MEAT,
@@ -43,6 +45,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"BUGS" = BUGS,
 	"GORE" = GORE,
 	"STONE" = STONE,
+	"EGG" = EGG,
 	"CUCUMBER" = CUCUMBER,
 ))
 
@@ -69,6 +72,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"BUGS", \
 	"GORE", \
 	"STONE", \
+	"EGG", \
 	"CUCUMBER", \
 )
 
@@ -95,6 +99,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"Bugs", \
 	"Gore", \
 	"Rocks", \
+	"Eggs", \
 	"Cucumbers", \
 )
 
