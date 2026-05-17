@@ -21,8 +21,6 @@
 #define STONE (1<<20)
 #define EGG (1<<21)
 
-#define CUCUMBER (1<<22) //ORBSTATION EDIT
-
 DEFINE_BITFIELD(foodtypes, list(
 	"MEAT" = MEAT,
 	"VEGETABLES" = VEGETABLES,
@@ -46,7 +44,6 @@ DEFINE_BITFIELD(foodtypes, list(
 	"GORE" = GORE,
 	"STONE" = STONE,
 	"EGG" = EGG,
-	"CUCUMBER" = CUCUMBER,
 ))
 
 /// A list of food type names, in order of their flags
@@ -73,7 +70,6 @@ DEFINE_BITFIELD(foodtypes, list(
 	"GORE", \
 	"STONE", \
 	"EGG", \
-	"CUCUMBER", \
 )
 
 /// IC meaning (more or less) for food flags
