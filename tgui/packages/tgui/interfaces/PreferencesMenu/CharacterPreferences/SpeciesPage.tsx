@@ -46,7 +46,6 @@ const FOOD_ICONS = {
 const FOOD_NAMES: Record<keyof typeof FOOD_ICONS, string> = {
   [Food.Bugs]: 'Bugs',
   [Food.Cloth]: 'Clothing',
-  [Food.Cucumber]: 'Cucumbers',
   [Food.Dairy]: 'Dairy',
   [Food.Fried]: 'Fried food',
   [Food.Fruit]: 'Fruit',
