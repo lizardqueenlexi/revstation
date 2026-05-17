@@ -269,9 +269,6 @@
 				return conditional_tooltip("Subject is blind from eye damage.", "Repair surgically, use medication such as [/datum/reagent/medicine/oculine::name], or protect eyes with a blindfold.", add_tooltips)
 		return "Subject is blind."
 
-	if(HAS_TRAIT(owner, TRAIT_FARSIGHT)) //ORBSTATION: Farsighted quirk
-		return conditional_tooltip("Subject is permanently farsighted.", "Irreparable under normal circumstances. Prescription glasses will assuage the effects.", add_tooltips)
-
 	if(owner.is_nearsighted())
 		if(advanced)
 			if(owner.is_nearsighted_from(QUIRK_TRAIT))

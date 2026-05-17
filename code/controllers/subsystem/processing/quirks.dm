@@ -7,9 +7,8 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	list(/datum/quirk/item_quirk/blindness, /datum/quirk/item_quirk/nearsighted),
 	list(/datum/quirk/item_quirk/blindness, /datum/quirk/item_quirk/scarred_eye),
 	list(/datum/quirk/mute, /datum/quirk/robot_voice), //ORBSTATION
-	list(/datum/quirk/item_quirk/farsighted, /datum/quirk/illiterate), //ORBSTATION
 	list(/datum/quirk/item_quirk/blindness, /datum/quirk/door_closer), //ORBSTATION
-	list(/datum/quirk/item_quirk/blindness, /datum/quirk/item_quirk/nearsighted,  /datum/quirk/item_quirk/scarred_eye, /datum/quirk/item_quirk/farsighted),//ORBSTATION: added "Farsighted" to this list
+	list(/datum/quirk/item_quirk/blindness, /datum/quirk/item_quirk/nearsighted,  /datum/quirk/item_quirk/scarred_eye),
 	list(/datum/quirk/item_quirk/blindness, /datum/quirk/item_quirk/fluoride_stare),
 	list(/datum/quirk/item_quirk/blindness, /datum/quirk/touchy),
 	list(/datum/quirk/jolly, /datum/quirk/depression, /datum/quirk/hypersensitive),

@@ -7041,7 +7041,6 @@
 #include "orbstation\code\customisation\quirks\augmented.dm"
 #include "orbstation\code\customisation\quirks\bioscrambler_victim.dm"
 #include "orbstation\code\customisation\quirks\door_compulsion.dm"
-#include "orbstation\code\customisation\quirks\farsighted.dm"
 #include "orbstation\code\customisation\quirks\food_order_service.dm"
 #include "orbstation\code\customisation\quirks\good_to_neutral_quirks.dm"
 #include "orbstation\code\customisation\quirks\linguist.dm"

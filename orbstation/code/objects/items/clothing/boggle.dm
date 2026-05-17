@@ -6,7 +6,7 @@
 	icon_state = "boggle"
 	worn_icon_state = "eyeglasses"
 	gender = PLURAL
-	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED,TRAIT_FARSIGHTED_CORRECTED)
+	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED)
 	custom_materials = null
 
 /datum/crafting_recipe/boggle

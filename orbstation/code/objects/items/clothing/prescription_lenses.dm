@@ -14,7 +14,7 @@
 	if (!isturf(target_glasses.loc))
 		user.balloon_alert(user, "put glasses down!") //They need to be outside your inventory or the trait won't apply
 		return
-	if ((HAS_TRAIT(target_glasses, TRAIT_NEARSIGHTED_CORRECTED)) || HAS_TRAIT(target_glasses, TRAIT_FARSIGHTED_CORRECTED))
+	if (HAS_TRAIT(target_glasses, TRAIT_NEARSIGHTED_CORRECTED))
 		user.balloon_alert(user, "already corrective!")
 		return
 	user.visible_message(span_notice("[user] starts attaching [src] to [target_glasses]."))
@@ -23,9 +23,8 @@
 		return
 	if (length(target_glasses.clothing_traits))
 		target_glasses.clothing_traits |= TRAIT_NEARSIGHTED_CORRECTED
-		target_glasses.clothing_traits |= TRAIT_FARSIGHTED_CORRECTED
 	else
-		target_glasses.clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED, TRAIT_FARSIGHTED_CORRECTED)
+		target_glasses.clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED)
 	target_glasses.AddComponent(/datum/component/knockoff, 25, list(BODY_ZONE_PRECISE_EYES), slot_flags)
 	user.balloon_alert(user, "lens added")
 	qdel(src)
