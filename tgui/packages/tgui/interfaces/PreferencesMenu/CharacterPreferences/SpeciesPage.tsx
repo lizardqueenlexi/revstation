@@ -26,7 +26,6 @@ import { useServerPrefs } from '../useServerPrefs';
 const FOOD_ICONS = {
   [Food.Bugs]: 'bug',
   [Food.Cloth]: 'tshirt',
-  [Food.Cucumber]: 'staff-snake',
   [Food.Dairy]: 'cheese',
   [Food.Fried]: 'bacon',
   [Food.Fruit]: 'apple-alt',
