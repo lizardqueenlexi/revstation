@@ -26,7 +26,6 @@ import { useServerPrefs } from '../useServerPrefs';
 const FOOD_ICONS = {
   [Food.Bugs]: 'bug',
   [Food.Cloth]: 'tshirt',
-  [Food.Cucumber]: 'staff-snake',
   [Food.Dairy]: 'cheese',
   [Food.Fried]: 'bacon',
   [Food.Fruit]: 'apple-alt',
@@ -47,7 +46,6 @@ const FOOD_ICONS = {
 const FOOD_NAMES: Record<keyof typeof FOOD_ICONS, string> = {
   [Food.Bugs]: 'Bugs',
   [Food.Cloth]: 'Clothing',
-  [Food.Cucumber]: 'Cucumbers',
   [Food.Dairy]: 'Dairy',
   [Food.Fried]: 'Fried food',
   [Food.Fruit]: 'Fruit',

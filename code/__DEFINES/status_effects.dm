@@ -94,11 +94,6 @@
 /// Cures the mob's nearsightedness from the passed source, removing nearsighted wholesale if no sources are left.
 #define cure_nearsighted(source) remove_status_effect(/datum/status_effect/grouped/nearsighted, source)
 
-/// Causes the mob to become farsighted via the passed source
-#define become_farsighted(source) apply_status_effect(/datum/status_effect/grouped/farsighted, source)
-/// Cures the mob's farsightedness from the passed source, removing farsighted wholesale if no sources are left
-#define cure_farsighted(source) remove_status_effect(/datum/status_effect/grouped/farsighted, source)
-
 /// Is the mob nearsighted?
 #define is_nearsighted(...) has_status_effect(/datum/status_effect/grouped/nearsighted)
 /// Is the mob nearsigthed from the passed source or sources?

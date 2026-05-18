@@ -13,7 +13,6 @@ export enum Food {
   Breakfast = 'BREAKFAST',
   Bugs = 'BUGS',
   Cloth = 'CLOTH',
-  Cucumber = 'CUCUMBER',
   Dairy = 'DAIRY',
   Fried = 'FRIED',
   Fruit = 'FRUIT',
@@ -31,6 +30,7 @@ export enum Food {
   Sugar = 'SUGAR',
   Toxic = 'TOXIC',
   Vegetables = 'VEGETABLES',
+  Egg = 'EGG',
 }
 
 export enum JobPriority {

@@ -136,7 +136,7 @@
 		to_chat(brother.current, span_notice("Your implant fizzles away! The Syndicate has given you a new objective."))
 		var/datum/antagonist/brother/bb_datum = brother.has_antag_datum(/datum/antagonist/brother)
 		bb_datum.objectives += newkill
-		log_traitor("BLOOD BROTHER: [name] delivered a [steal_objective.steal_target] at [gameTimestamp()].")
+		log_traitor("BLOOD BROTHER: [name] delivered a [steal_objective.steal_target] at [round_timestamp()].")
 
 /// generates a light steal objective if there are no objectives and then from then on generates murder or heist objectives
 /datum/team/brother_team/forge_single_objective()

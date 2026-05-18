@@ -19,8 +19,6 @@
 // Multiplies the time it takes to craft items by FAST_CRAFTER_MOD
 #define TRAIT_FAST_CRAFTER "orb_fast_crafter"
 #define FAST_CRAFTER_MOD 0.5
-// Makes you illiterate while not wearing glasses
-#define TRAIT_FARSIGHT "farsighted"
 // Makes you close doors behind you automatically
 #define TRAIT_DOOR_CLOSER "compulsive_door_closer"
 // Makes supplypods drop food relevant to your tastes
@@ -29,11 +27,6 @@
 #define TRAIT_DAMNED "damned"
 // Used by the "Damned" quirk and the "damned halo" element.
 #define TRAIT_DAMNED_HALO "damned_halo"
-//Trait sources
-// Special trait source for illiteracy granted by farsightedness
-#define FARSIGHT_TRAIT "farsighted_trait"
-/// Prevents the overlay from nearsightedness
-#define TRAIT_FARSIGHTED_CORRECTED "orb_fixes_farsighted"
 
 
 /// Trait given to a mob that is currently looc thinking (giving off the "thinking" icon), used in an local ooc context

@@ -2923,7 +2923,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "aWy" = (
-/mob/living/simple_animal/bot/secbot/beepsky/officer,
+/mob/living/basic/bot/secbot/beepsky/officer,
 /turf/open/floor/carpet/lone/star,
 /area/station/security/brig)
 "aWC" = (
@@ -3587,13 +3587,10 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "bjT" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	id = "mining_internal"
-	},
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/turf_decal/stripes/asteroid/line,
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
 "bjW" = (
@@ -7072,12 +7069,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/central)
 "cvR" = (
-/obj/machinery/conveyor{
-	dir = 5;
-	id = "mining_internal"
-	},
 /obj/structure/railing{
-	dir = 9
+	dir = 8
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
@@ -8246,11 +8242,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "cMO" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "mining_internal"
-	},
-/obj/machinery/bouldertech/refinery,
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
 "cMT" = (
@@ -8553,6 +8544,16 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/storage)
+"cSO" = (
+/obj/machinery/conveyor{
+	id = "mining"
+	},
+/obj/machinery/brm,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/misc/asteroid,
+/area/station/cargo/miningdock)
 "cTe" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -12697,11 +12698,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/pumproom)
 "era" = (
-/obj/machinery/conveyor{
-	dir = 10;
-	id = "mining_internal"
-	},
-/obj/machinery/brm,
+/obj/effect/turf_decal/stripes/asteroid/line,
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
 "ern" = (
@@ -13149,6 +13146,10 @@
 /obj/item/tgui_book/manual/dsm{
 	pixel_y = 10;
 	pixel_x = 4
+	},
+/obj/item/tgui_book/manual/idc{
+	pixel_y = 16;
+	pixel_x = 6
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
@@ -14524,11 +14525,8 @@
 /turf/open/floor/white,
 /area/station/medical/treatment_center)
 "eWU" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "mining_internal"
-	},
 /obj/machinery/light/directional/south,
+/obj/effect/turf_decal/stripes/asteroid/line,
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
 "eWZ" = (
@@ -26227,13 +26225,11 @@
 /turf/open/floor/iron/white,
 /area/station/maintenance/port/greater)
 "jcl" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "mining_internal";
-	name = "mining conveyor";
-	pixel_x = 1;
-	pixel_y = 8
+/obj/machinery/bouldertech/refinery,
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "mining"
 	},
-/obj/structure/railing,
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
 "jcq" = (
@@ -27504,7 +27500,7 @@
 /turf/open/floor/carpet,
 /area/station/service/theater)
 "jyE" = (
-/mob/living/simple_animal/bot/secbot/pingsky{
+/mob/living/basic/bot/secbot/pingsky{
 	dir = 1
 	},
 /obj/structure/cable,
@@ -32531,10 +32527,9 @@
 /turf/open/floor/iron/terracotta/small,
 /area/station/hallway/primary/starboard)
 "lgl" = (
-/obj/machinery/bouldertech/refinery/smelter,
 /obj/machinery/conveyor{
-	dir = 1;
-	id = "mining_internal"
+	dir = 9;
+	id = "mining"
 	},
 /obj/structure/railing{
 	dir = 8
@@ -44718,7 +44713,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/project)
 "pka" = (
-/mob/living/simple_animal/bot/secbot/beepsky/armsky,
+/mob/living/basic/bot/secbot/beepsky/armsky,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
@@ -49011,6 +49006,10 @@
 "qID" = (
 /obj/effect/turf_decal/stripes/asteroid/box,
 /obj/item/radio/intercom/directional/north,
+/obj/machinery/conveyor_switch/oneway{
+	id = "mining";
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
 "qIL" = (
@@ -49933,8 +49932,10 @@
 /turf/open/floor/stone,
 /area/station/hallway/primary/starboard)
 "qWY" = (
-/obj/structure/railing{
-	dir = 10
+/obj/machinery/bouldertech/refinery/smelter,
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "mining"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
@@ -50722,6 +50723,10 @@
 	dir = 8
 	},
 /obj/machinery/status_display/ai/directional/west,
+/obj/item/tgui_book/manual/idc{
+	pixel_y = 3;
+	pixel_x = 3
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "rlD" = (
@@ -58019,10 +58024,7 @@
 /turf/open/floor/grass,
 /area/station/biodome)
 "tLg" = (
-/obj/effect/turf_decal/delivery,
-/obj/structure/railing/corner/end{
-	dir = 8
-	},
+/obj/item/wrench,
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
 "tLj" = (
@@ -65865,9 +65867,12 @@
 /turf/open/floor/iron/terracotta/small,
 /area/station/biodome/aft)
 "wya" = (
-/obj/effect/turf_decal/delivery,
-/obj/structure/railing/corner/end/flip{
-	dir = 8
+/obj/machinery/conveyor{
+	dir = 10;
+	id = "mining"
+	},
+/obj/structure/railing{
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/station/cargo/miningdock)
@@ -117076,7 +117081,7 @@ kUt
 vKP
 tLg
 qWY
-cMO
+era
 jap
 rRv
 rRv
@@ -117331,7 +117336,7 @@ tbV
 eDA
 kUt
 vKP
-vKP
+cMO
 jcl
 eWU
 jap
@@ -117588,7 +117593,7 @@ tbV
 xwK
 hIs
 rIv
-vKP
+cSO
 wya
 era
 jap

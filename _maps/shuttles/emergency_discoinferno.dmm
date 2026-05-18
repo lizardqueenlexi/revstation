@@ -66,6 +66,10 @@
 	},
 /turf/open/floor/mineral/gold,
 /area/shuttle/escape)
+"n" = (
+/obj/effect/spawner/random/entertainment/slot_machine,
+/turf/open/floor/wood,
+/area/shuttle/escape)
 "o" = (
 /obj/machinery/computer/communications{
 	dir = 8
@@ -121,11 +125,6 @@
 /obj/item/reagent_containers/cup/glass/bottle/vodka/badminka,
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"C" = (
-/obj/machinery/computer/slot_machine,
-/obj/machinery/light/directional/west,
-/turf/open/floor/wood,
-/area/shuttle/escape)
 "D" = (
 /obj/structure/chair/comfy/brown{
 	dir = 8
@@ -159,10 +158,6 @@
 /obj/item/coin/plasma,
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"I" = (
-/obj/machinery/computer/slot_machine,
-/turf/open/floor/wood,
-/area/shuttle/escape)
 "J" = (
 /obj/structure/chair/comfy/brown{
 	dir = 1
@@ -174,11 +169,6 @@
 /obj/item/reagent_containers/cup/glass/bottle/absinthe,
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"M" = (
-/obj/machinery/power/shuttle_engine/heater,
-/obj/structure/window/reinforced/plasma/spawner/directional/north,
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
 "N" = (
 /obj/machinery/power/shuttle_engine/propulsion,
 /turf/open/floor/plating/airless,
@@ -187,27 +177,37 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/shuttle/escape)
 "P" = (
-/obj/structure/table/wood/fancy,
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"R" = (
-/turf/open/floor/light/colour_cycle/dancefloor_b,
-/area/shuttle/escape)
-"S" = (
 /obj/structure/statue/plasma/scientist{
 	anchored = 1;
 	custom_materials = list(/datum/material/plasma=100000)
 	},
 /turf/open/floor/light/colour_cycle/dancefloor_b,
 /area/shuttle/escape)
-"T" = (
-/obj/machinery/light/floor,
-/turf/open/floor/mineral/gold,
+"R" = (
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/shuttle/escape)
+"S" = (
+/obj/structure/table/wood/fancy,
+/turf/open/floor/wood,
 /area/shuttle/escape)
 "U" = (
 /obj/structure/table/wood/poker,
 /obj/item/storage/box/drinkingglasses,
 /obj/item/reagent_containers/cup/glass/bottle/whiskey,
+/turf/open/floor/mineral/gold,
+/area/shuttle/escape)
+"V" = (
+/obj/effect/spawner/random/entertainment/slot_machine,
+/obj/machinery/light/directional/west,
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"X" = (
+/obj/machinery/power/shuttle_engine/heater,
+/obj/structure/window/reinforced/plasma/spawner/directional/north,
+/turf/open/floor/plating/airless,
+/area/shuttle/escape)
+"Y" = (
+/obj/machinery/light/floor,
 /turf/open/floor/mineral/gold,
 /area/shuttle/escape)
 
@@ -241,7 +241,7 @@ b
 b
 b
 O
-S
+P
 r
 r
 r
@@ -251,11 +251,11 @@ r
 r
 r
 r
-S
+P
 c
 x
-C
-I
+V
+n
 b
 b
 "}
@@ -280,7 +280,7 @@ c
 x
 D
 D
-M
+X
 N
 "}
 (4,1,1) = {"
@@ -304,7 +304,7 @@ c
 x
 x
 x
-M
+X
 N
 "}
 (5,1,1) = {"
@@ -328,13 +328,13 @@ c
 y
 E
 y
-M
+X
 N
 "}
 (6,1,1) = {"
 c
 f
-T
+Y
 U
 c
 r
@@ -352,7 +352,7 @@ c
 z
 F
 J
-M
+X
 N
 "}
 (7,1,1) = {"
@@ -376,7 +376,7 @@ c
 y
 G
 y
-M
+X
 N
 "}
 (8,1,1) = {"
@@ -400,7 +400,7 @@ c
 x
 x
 x
-M
+X
 N
 "}
 (9,1,1) = {"
@@ -424,7 +424,7 @@ c
 A
 x
 K
-M
+X
 N
 "}
 (10,1,1) = {"
@@ -433,7 +433,7 @@ b
 b
 b
 O
-S
+P
 r
 r
 r
@@ -443,11 +443,11 @@ r
 r
 r
 r
-S
+P
 c
 B
 H
-P
+S
 b
 b
 "}
