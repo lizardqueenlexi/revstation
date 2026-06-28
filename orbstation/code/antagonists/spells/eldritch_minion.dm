@@ -106,7 +106,7 @@
 	var/static/list/picks_to_instances = list()
 
 	if (length(options) == 0)
-		for (var/type as anything in subtypesof(/datum/demonological_summon))
+		for (var/type in subtypesof(/datum/demonological_summon))
 			var/datum/demonological_summon/summon = new type()
 			var/datum/radial_menu_choice/choice = summon.generate_radial_entry()
 			if (!choice)

@@ -60,3 +60,5 @@
 	//weight *= 3 				ough
 	max_occurrences *= 2
 	earliest_start *= 0.25
+
+#undef STATION_TRAIT_YTP

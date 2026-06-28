@@ -1,7 +1,7 @@
 /datum/language/solcom
 	name = "Sol Standard"
 	desc = "The language spoken on most human-majority planets."
-	key = "s"
+	key = "l"
 	icon = 'orbstation/icons/language.dmi'
 	icon_state = "sol"
 	always_use_default_namelist = TRUE

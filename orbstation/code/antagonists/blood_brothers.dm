@@ -213,7 +213,7 @@
 	///The item that it will accept and mark as complete
 	var/list/brother_bounty
 
-/obj/effect/holo_pad/Initialize()
+/obj/effect/holo_pad/Initialize(mapload)
 	. = ..()
 	add_atom_colour("#ff3737", FIXED_COLOUR_PRIORITY)
 	var/static/list/connections = list(COMSIG_ATOM_ENTERED = PROC_REF(on_entered))
@@ -292,7 +292,7 @@
 	duration = 0.8 SECONDS
 	icon_state = "medi_holo"
 
-/obj/effect/temp_visual/delivery_flash/Initialize()
+/obj/effect/temp_visual/delivery_flash/Initialize(mapload)
 	. = ..()
 	add_atom_colour("#ff3737", FIXED_COLOUR_PRIORITY)
 

@@ -14,7 +14,8 @@
 /// Randomise how we look on init
 /mob/living/basic/regal_rat/proc/pick_random_look()
 	var/list/valid_starting_styles = list()
-	for (var/datum/rat_fashion/style_path as anything in subtypesof(/datum/rat_fashion))
+	for (var/_path in subtypesof(/datum/rat_fashion))
+		var/datum/rat_fashion/style_path = _path
 		if (!initial(style_path.allow_random))
 			continue
 		valid_starting_styles += new style_path()
@@ -24,14 +25,14 @@
 	current_look.apply(src)
 
 /mob/living/basic/regal_rat/death(gibbed)
-	current_look.on_death(src)
+	current_look?.on_death(src)
 	return ..()
 
 /mob/living/basic/regal_rat/revive(full_heal_flags, excess_healing, force_grab_ghost)
 	. = ..()
 	if(!.)
 		return
-	current_look.apply(src)
+	current_look?.apply(src)
 
 /mob/living/basic/regal_rat/Destroy()
 	. = ..()
@@ -60,7 +61,7 @@
 	var/list/options = list()
 	var/list/picks_to_instances = list()
 	var/list/rat_styles = subtypesof(/datum/rat_fashion)
-	for (var/style_path as anything in rat_styles)
+	for (var/style_path in rat_styles)
 		var/datum/rat_fashion/style = new style_path()
 		var/datum/radial_menu_choice/choice = style.get_radial_select()
 		options += list("[choice.name]" = choice)

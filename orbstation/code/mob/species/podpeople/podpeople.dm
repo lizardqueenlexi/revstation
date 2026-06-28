@@ -31,7 +31,7 @@
 
 		"Most find a way out of their seed vaults when some haphazard miner wanders into their vault, but as time goes on, the idea of free communication and \
 		sharing of techonlogy with other species spreads further. Many podpeople now leave their vaults in groups, once again dispersed amid the galaxy. Some \
-		find fulfilling lives on the frontier, as farmers, shiphands and pirates. Some, even, end up working for NanoTrasen, loathe as they are to refuse \
+		find fulfilling lives on the frontier, as farmers, shiphands and pirates. Some, even, end up working for Nanotrasen, loathe as they are to refuse \
 		willing warm bodies.",
 	)
 

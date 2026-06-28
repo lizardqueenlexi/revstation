@@ -15,9 +15,9 @@
 	reaction_tags = REACTION_TAG_DRINK | REACTION_TAG_EASY | REACTION_TAG_OTHER
 
 /datum/chemical_reaction/drink/goblin_juice_2
-    results = list(/datum/reagent/consumable/ethanol/goblin_juice = 6)
-    required_reagents = list (/datum/reagent/consumable/ethanol/gin = 1, /datum/reagent/oxygen = 1, /datum/reagent/bromine = 1, /datum/reagent/lithium = 1, /datum/reagent/iron = 1, /datum/reagent/nitrogen = 1)
-    reaction_tags = REACTION_TAG_DRINK | REACTION_TAG_EASY | REACTION_TAG_OTHER
+	results = list(/datum/reagent/consumable/ethanol/goblin_juice = 6)
+	required_reagents = list (/datum/reagent/consumable/ethanol/gin = 1, /datum/reagent/oxygen = 1, /datum/reagent/bromine = 1, /datum/reagent/lithium = 1, /datum/reagent/iron = 1, /datum/reagent/nitrogen = 1)
+	reaction_tags = REACTION_TAG_DRINK | REACTION_TAG_EASY | REACTION_TAG_OTHER
 
 /datum/reagent/consumable/ethanol/goblin_juice/overdose_process(mob/living/M, seconds_per_tick, times_fired)
 	M.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)

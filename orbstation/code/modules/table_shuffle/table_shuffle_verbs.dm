@@ -74,13 +74,13 @@ ADMIN_VERB(show_high_rollers, R_DEBUG|R_SERVER, "Shuffle show high rollers", "Di
 		return
 	SStable_shuffle.display_high_rollers(usr)
 
-/datum/controller/subsystem/table_shuffle/proc/display_high_rollers(var/mob/user)
+/datum/controller/subsystem/table_shuffle/proc/display_high_rollers(mob/user)
 	var/high_rollers_total = 0
 	var/dat = "Probability values:<br>[prob_min] min - [prob_max] max<br>Add [prob_add], sub [prob_sub]<br>High roller threshold [high_roller_amt].<hr>"
 	for(var/area/area in high_rollers)
 		var/total = high_rollers[area]
 		high_rollers_total += total
-		dat += "<a href='?\ref[src];[area.type]'>[area.name]</a>: [total] events<br>"
+		dat += "<b>[area.name]</b>: [total] events<br>"
 	user << browse("<h3>High Rollers List</h3><br>High rollers accounted for [high_rollers_total] of the [event_total] roundstart events.<hr>[dat]","window=tshuf_high_rollers")
 
 /datum/controller/subsystem/table_shuffle/Topic(href,href_list)

@@ -1,7 +1,7 @@
 /datum/mood_event/chew_toy
-    description = "I have my mouse safely in my mouth."
-    mood_change = 2
-    timeout = 0
+	description = "I have my mouse safely in my mouth."
+	mood_change = 2
+	timeout = 0
 
 // Make the toy mouse wearable
 /obj/item/toy/cattoy
@@ -16,9 +16,9 @@
 	if (!(slot & ITEM_SLOT_MASK))
 		return
 	wearing.add_mood_event("chew toy", /datum/mood_event/chew_toy)
-        //felinid moodlet
+		//felinid moodlet
 
 /obj/item/toy/cattoy/dropped(mob/living/wearing)
 	. = ..()
 	wearing.clear_mood_event("chew toy")
-    //felinid unmoodlet
+	//felinid unmoodlet

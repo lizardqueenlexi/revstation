@@ -25,7 +25,7 @@
 	return ..() && !(bodypart_owner.owner?.obscured_slots & HIDEHAIR)
 
 /datum/bodypart_overlay/mutant/rat_ears/color_image(image/overlay, draw_layer, obj/item/bodypart/limb)
-	if(draw_layer != bitflag_to_layer(colorless_layer))
+	if(draw_layer != all_layers[colorless_layer])
 		return ..()
 	return overlay
 

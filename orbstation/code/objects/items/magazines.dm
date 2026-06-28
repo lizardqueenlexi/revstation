@@ -43,7 +43,7 @@
 
 	// any new magazines give bonus mood
 	if(has_not_read_book)
-		// TODO: if a user reads two magazines in short succession, they will only recieve mood boost from one
+		// TODO: if a user reads two magazines in short succession, they will only receive mood boost from one
 		// but be locked out of both.
 		// fix this.
 		user.add_mood_event(starting_title, /datum/mood_event/magazine, src)
@@ -149,15 +149,15 @@
 
 //Flavor item for the Biodome arrivals shuttle, but I think it's funny if it still appears elsewhere.
 /obj/item/book/granter/magazine/biodome
-	name = "NanoTrasen 'Biodome' Travel Brochure"
-	starting_title = "NanoTrasen 'Biodome' Travel Brochure"
-	desc = "A somewhat tacky brochure for NanoTrasen's new line of 'Biodome'-class stations."
+	name = "Nanotrasen 'Biodome' Travel Brochure"
+	starting_title = "Nanotrasen 'Biodome' Travel Brochure"
+	desc = "A somewhat tacky brochure for Nanotrasen's new line of 'Biodome'-class stations."
 	icon_state = "biochure"
 	pages_to_mastery = 2 //so you can see a few remarks each time
 	remarks = list(
 		"Now with live, open-air entertainment (entertainment is still largely clown-based)...",
 		"See the dome in style with our new 'BioTube' transit system...",
-		"Get all the tools you could ever need from 'The Grotto'... but watch your step! (NanoTrasen is not liable for injuries related to use of The Grotto(tm).)",
+		"Get all the tools you could ever need from 'The Grotto'... but watch your step! (Nanotrasen is not liable for injuries related to use of The Grotto(tm).)",
 		"Take a calming river ride across the scenic Biodome Lake! (Minimum speed 70 kph).",
 		"Research in style in our state-of-the-art 'VapoRnDwave' facilities!",
 		"See such exciting zoo exhibits as axolotls, endangered lagomorphs, or even the rare Amoungs!",
