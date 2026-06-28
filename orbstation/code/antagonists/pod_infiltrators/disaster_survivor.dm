@@ -26,7 +26,7 @@
 	you_are_text = "You are a disaster survivor."
 	flavour_text = "Blaring klaxons. Rippling explosions. The smell of ozone. Finally, cold and silence. You barely got away, but the \
 		others weren't so lucky. You've been adrift for months in this tiny pod, watching your ration supplies dwindle to nothing. You can \
-		see salvation ahead, though... NanoTrasen-branded salvation. Hopefully that's better than dying alone in space."
+		see salvation ahead, though... Nanotrasen-branded salvation. Hopefully that's better than dying alone in space."
 	important_text = "Use the navigation computer and shuttle console to navigate the pod to the station, and sneak your way on board. Do \
 		what you have to to survive. The gear you stole from the body of one of those bastards that attacked your old home should help..."
 	spawner_job_path = /datum/job/disaster_survivor

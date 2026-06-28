@@ -23,7 +23,7 @@
 
 /mob/living/simple_animal/hostile/megafauna/wendigo
 	name = "Bambi"
-	desc = "A demonic, bloodthirsty monster lovingly nicknamed by NanoTrasen miners. You probably aren't going to survive this."
+	desc = "A demonic, bloodthirsty monster lovingly nicknamed by Nanotrasen miners. You probably aren't going to survive this."
 
 /obj/projectile/colossus/wendigo_shockwave
 	name = "Bambi shockwave"

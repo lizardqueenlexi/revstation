@@ -31,7 +31,7 @@
 	/// A list containing advertisements that the machine says while working.
 	var/static/list/advertisements = list(\
 	"Thank you for using the Self-Actualization Device, brought to you by Interdyne!.", \
-	"The Self-Actualization device is not to be used without direct supervision. Nanotransen is not liable for any and all injuries sustained under unsupervised usage of the Self-Actualization Device.", \
+	"The Self-Actualization device is not to be used without direct supervision. Nanotrasen is not liable for any and all injuries sustained under unsupervised usage of the Self-Actualization Device.", \
 	"Please make sure to clean the Self-Actualization Device every fifteen minutes! The Self-Actualization Device is not to be used un-cleaned.", \
 	"Before using the Self-Actualization Device, remove any and all metal devices, or you might make the term 'ironman' a bit too literal!" , \
 	"Have more questions about the Self-Actualization Device? Call your nearest Interdyne Representative to requisition more information about the Self-Actualization Device!" \
@@ -74,7 +74,7 @@
 	if(!powered() || !occupant || state_open)
 		return CLICK_ACTION_BLOCKING
 
-	balloon_alert(user, "You power on [src].")
+	balloon_alert(user, "powered on")
 	addtimer(CALLBACK(src, PROC_REF(eject_new_you)), processing_time, TIMER_OVERRIDE|TIMER_UNIQUE)
 	processing = TRUE
 	update_appearance()
@@ -85,7 +85,7 @@
 		open_machine()
 		return FALSE
 
-	balloon_alert(user, span_notice("The emergency release is not responding! You start pushing against the hull!"))
+	balloon_alert(user, "trying to breakout...")
 	user.changeNext_move(CLICK_CD_BREAKOUT)
 	user.last_special = world.time + CLICK_CD_BREAKOUT
 	user.visible_message(span_notice("You see [user] kicking against the door of [src]!"), \

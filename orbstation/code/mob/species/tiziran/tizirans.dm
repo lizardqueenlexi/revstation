@@ -17,10 +17,10 @@
 		great Tiziran Empire, a vast and militaristic space empire that spread throughout their home system and to the stars beyond.",
 
 		"For many centuries, the Empire stood, spreading far and wide and even brushing up against the edges of human \
-		 space. However, it was not conflict with their younger neighbors that would spell the end for the Empire, but \
-		 conflict from within. The increasingly decadent Silverscale nobility were content to ignore the problems \
-		 facing their people, from poverty to famine to pirate raids across the many distant border-worlds - and \
-		 thirty years ago, internal tensions came to a head.",
+		space. However, it was not conflict with their younger neighbors that would spell the end for the Empire, but \
+		conflict from within. The increasingly decadent Silverscale nobility were content to ignore the problems \
+		facing their people, from poverty to famine to pirate raids across the many distant border-worlds - and \
+		thirty years ago, internal tensions came to a head.",
 
 		"The so-called \"Tiziran Civil War\" was quick and bloody, and today the Empire has fractured into many pieces - \
 		some proclaiming themselves the \"true Empire\", others trying to build something new, and others simply trying \

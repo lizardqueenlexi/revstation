@@ -157,7 +157,7 @@
 /datum/contract_killer_kit/poison
 	name = "Poisoner's Kit"
 	description = "What murder could be more classic than poisoning? Contains two bottles of random poisons, a box of armor-piercing \
-	 syringes, a compact syringe gun, and a bottle of pentetic acid (in case you screw up, or if your target is a jellyperson)."
+		syringes, a compact syringe gun, and a bottle of pentetic acid (in case you screw up, or if your target is a jellyperson)."
 	icon = 'icons/obj/weapons/guns/syringegun.dmi'
 	icon_state = "dartsyringegun"
 	kit_path = /obj/item/storage/briefcase/secure/contract_killer/poison

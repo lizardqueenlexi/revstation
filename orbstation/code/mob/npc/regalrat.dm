@@ -14,7 +14,7 @@
 /// Randomise how we look on init
 /mob/living/basic/regal_rat/proc/pick_random_look()
 	var/list/valid_starting_styles = list()
-	for (var/datum/rat_fashion/style_path as anything in subtypesof(/datum/rat_fashion))
+	for (var/datum/rat_fashion/style_path in subtypesof(/datum/rat_fashion))
 		if (!initial(style_path.allow_random))
 			continue
 		valid_starting_styles += new style_path()

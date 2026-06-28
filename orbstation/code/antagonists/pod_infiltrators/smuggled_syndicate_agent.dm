@@ -34,7 +34,7 @@
 	prompt_name = "a smuggled syndicate agent"
 	you_are_text = "You are a Syndicate agent."
 	flavour_text = "You're right on time. Your dusty old pod isn't the most elegant means of infiltration, but it's definitely subtle. \
-		You're here for a purpose - to disrupt NanoTrasen's operations by any means necessary. You don't have the luxury of a cover identity \
+		You're here for a purpose - to disrupt Nanotrasen's operations by any means necessary. You don't have the luxury of a cover identity \
 		like some of your colleagues. But you don't need it. You've come prepared."
 	important_text = "Use the navigation computer and shuttle console to navigate the pod to the station, and sneak your way on board. You \
 		have an implanted uplink, use it wisely."

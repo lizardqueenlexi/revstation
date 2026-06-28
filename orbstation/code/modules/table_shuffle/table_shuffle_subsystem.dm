@@ -120,7 +120,7 @@ SUBSYSTEM_DEF(table_shuffle)
  * manual=1 logs shuffle as manual, manual=2 triggers maximum shuffle despite area restriction
  */
 
-/datum/controller/subsystem/table_shuffle/proc/shuffle_area(var/area/area,var/manual = 0)
+/datum/controller/subsystem/table_shuffle/proc/shuffle_area(area/area,var/manual = 0)
 	if(!manual && (!is_station_level(area.z) || (area.shuffle_options == 0) || !prob(prob_max))) return
 
 	var/list/table_turfs = list()
@@ -390,7 +390,7 @@ SUBSYSTEM_DEF(table_shuffle)
 
 
 /// log_decay: handles the return of obj/shuffle_decay(), called after item has moved to final location.  Returns the current object in case that has changed.
-/datum/controller/subsystem/table_shuffle/proc/log_decay(var/opt,var/obj/item/item, var/list/item_log)
+/datum/controller/subsystem/table_shuffle/proc/log_decay(opt,obj/item/item, list/item_log)
 	// Check if irrelevant
 	if(!(opt & SHUFFLE_DECAY) || !istype(item) || !prob(prob_eat))
 		return item
