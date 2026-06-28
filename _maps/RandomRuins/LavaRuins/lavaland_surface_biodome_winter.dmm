@@ -12,6 +12,13 @@
 /obj/item/stack/medical/bruise_pack,
 /turf/open/floor/plating,
 /area/ruin/powered/snow_biodome)
+"ad" = (
+/obj/structure/table,
+/obj/item/stack/medical/wrap/gauze,
+/obj/item/stack/medical/wrap/gauze,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating,
+/area/ruin/powered/snow_biodome)
 "ae" = (
 /obj/machinery/power/smes,
 /turf/open/floor/plating,
@@ -251,13 +258,6 @@
 /mob/living/basic/skeleton/settler,
 /turf/open/floor/pod/dark,
 /area/ruin/powered/snow_biodome)
-"gQ" = (
-/obj/structure/table,
-/obj/item/stack/medical/wrap/gauze,
-/obj/item/stack/medical/wrap/gauze,
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating,
-/area/ruin/powered/snow_biodome)
 "hr" = (
 /mob/living/basic/skeleton/settler,
 /obj/effect/turf_decal/siding/wood{
@@ -272,6 +272,9 @@
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/powered/snow_biodome)
+"hL" = (
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors/explored)
 "og" = (
 /turf/open/floor/iron/stairs{
 	dir = 1
@@ -300,10 +303,6 @@
 	},
 /turf/open/floor/wood/parquet,
 /area/ruin/powered/snow_biodome)
-"tb" = (
-/obj/effect/mapping_helpers/no_lava,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors/explored)
 "tl" = (
 /turf/open/floor/pod/light,
 /area/ruin/powered/snow_biodome)
@@ -323,6 +322,10 @@
 "vN" = (
 /turf/open/floor/plating/snowed/smoothed,
 /area/ruin/powered/snow_biodome)
+"wx" = (
+/obj/effect/mapping_helpers/no_lava,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors/explored)
 "wN" = (
 /turf/open/floor/circuit,
 /area/ruin/powered/snow_biodome)
@@ -341,6 +344,11 @@
 /obj/item/paper,
 /turf/open/floor/pod/dark,
 /area/ruin/powered/snow_biodome)
+"BJ" = (
+/obj/effect/mapping_helpers/no_lava,
+/obj/effect/mapping_helpers/no_lava,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors/explored)
 "BM" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 8
@@ -419,14 +427,6 @@
 	name = "bridge"
 	},
 /area/ruin/powered/snow_biodome)
-"Qa" = (
-/obj/effect/mapping_helpers/no_lava,
-/obj/effect/mapping_helpers/no_lava,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors/explored)
-"QI" = (
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors/explored)
 "QK" = (
 /obj/structure/table,
 /obj/item/storage/fancy/cigarettes/cigpack_carp,
@@ -556,8 +556,8 @@ ak
 Wg
 Wg
 Wg
-QI
-QI
+hL
+hL
 aa
 aa
 aa
@@ -589,8 +589,8 @@ ak
 ak
 Wg
 Wg
-QI
-QI
+hL
+hL
 aa
 aa
 "}
@@ -622,8 +622,8 @@ ak
 ak
 Wg
 Wg
-QI
-tb
+hL
+wx
 aa
 "}
 (6,1,1) = {"
@@ -654,8 +654,8 @@ az
 ak
 ak
 Wg
-QI
-tb
+hL
+wx
 aa
 "}
 (7,1,1) = {"
@@ -687,7 +687,7 @@ ak
 bM
 Wg
 Wg
-tb
+wx
 aa
 "}
 (8,1,1) = {"
@@ -719,8 +719,8 @@ ak
 az
 ak
 Wg
-tb
-tb
+wx
+wx
 "}
 (9,1,1) = {"
 aa
@@ -752,7 +752,7 @@ ak
 ak
 Wg
 hA
-tb
+wx
 "}
 (10,1,1) = {"
 Wg
@@ -783,8 +783,8 @@ ak
 ak
 ak
 Wg
-tb
-tb
+wx
+wx
 "}
 (11,1,1) = {"
 Wg
@@ -816,11 +816,11 @@ Wg
 Wg
 Wg
 Wg
-tb
+wx
 "}
 (12,1,1) = {"
 Wg
-gQ
+ad
 af
 ar
 bw
@@ -848,7 +848,7 @@ Wg
 Dd
 Dd
 Wg
-tb
+wx
 "}
 (13,1,1) = {"
 Wg
@@ -880,7 +880,7 @@ Wg
 Mp
 dS
 Wg
-tb
+wx
 "}
 (14,1,1) = {"
 Wg
@@ -912,7 +912,7 @@ Wg
 tl
 tl
 Wg
-tb
+wx
 "}
 (15,1,1) = {"
 Wg
@@ -944,7 +944,7 @@ aO
 tl
 tl
 Ez
-Qa
+BJ
 "}
 (16,1,1) = {"
 Wg
@@ -976,7 +976,7 @@ aP
 tl
 tl
 aP
-Qa
+BJ
 "}
 (17,1,1) = {"
 Wg
@@ -1008,7 +1008,7 @@ Wg
 tl
 tl
 Wg
-tb
+wx
 "}
 (18,1,1) = {"
 Wg
@@ -1040,7 +1040,7 @@ Wg
 HP
 dS
 Wg
-tb
+wx
 "}
 (19,1,1) = {"
 Wg
@@ -1072,7 +1072,7 @@ Wg
 QK
 AM
 Wg
-tb
+wx
 "}
 (20,1,1) = {"
 Wg
@@ -1104,7 +1104,7 @@ Wg
 Wg
 Wg
 Wg
-tb
+wx
 "}
 (21,1,1) = {"
 Wg
@@ -1135,8 +1135,8 @@ ak
 ak
 ak
 Wg
-tb
-tb
+wx
+wx
 "}
 (22,1,1) = {"
 aa
@@ -1168,7 +1168,7 @@ ak
 ak
 Wg
 hA
-tb
+wx
 "}
 (23,1,1) = {"
 aa
@@ -1199,8 +1199,8 @@ ak
 ak
 ak
 Wg
-tb
-tb
+wx
+wx
 "}
 (24,1,1) = {"
 aa
@@ -1231,7 +1231,7 @@ ak
 bM
 Wg
 Wg
-tb
+wx
 aa
 "}
 (25,1,1) = {"
@@ -1262,8 +1262,8 @@ ak
 aC
 ak
 Wg
-QI
-tb
+hL
+wx
 aa
 "}
 (26,1,1) = {"
@@ -1294,7 +1294,7 @@ ak
 ak
 Wg
 Wg
-QI
+hL
 aa
 aa
 "}
@@ -1325,8 +1325,8 @@ ak
 ak
 Wg
 Wg
-QI
-QI
+hL
+hL
 aa
 aa
 "}
@@ -1356,8 +1356,8 @@ ak
 Wg
 Wg
 Wg
-QI
-QI
+hL
+hL
 aa
 aa
 aa

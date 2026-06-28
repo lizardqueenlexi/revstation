@@ -159,12 +159,7 @@
 	var/displayed_key = key
 	if(client?.holder?.fakekey)
 		displayed_key = null
-	deadchat_broadcast(rendered, source, follow_target = src, speaker_key = displayed_key)
-	for(var/mob/mobs_hearing as anything in GLOB.player_list)
-		if(SSticker.current_state != GAME_STATE_FINISHED && (mobs_hearing.see_invisible < invisibility || !isdead(mobs_hearing)))
-			continue
-		if(runechat_prefs_check(mobs_hearing))
-			mobs_hearing.create_chat_message(src, /datum/language/common, message)
+	deadchat_broadcast(rendered, source, follow_target = src, speaker_key = displayed_key, original_message = message)
 
 ///Check if this message is an emote
 /mob/proc/check_emote(message, forced)
@@ -177,7 +172,7 @@
 	return FALSE
 
 ///The amount of items we are looking for in the message
-#define MESSAGE_MODS_LENGTH 6
+#define MESSAGE_MODS_LENGTH 7
 
 /mob/proc/check_for_custom_say_emote(message, list/mods)
 	var/customsaypos = findtext(message, "*")
