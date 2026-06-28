@@ -31,3 +31,6 @@
 
 /// Trait given to a mob that is currently looc thinking (giving off the "thinking" icon), used in an local ooc context
 #define TRAIT_THINKING_LOOC "currently_thinking_LOOC"
+
+/// This mob is an authorised security deputy
+#define TRAIT_DEPUTISED "trait_deputised"

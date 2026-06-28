@@ -29,3 +29,5 @@
 	log_traitor("[key_name(user)] sent a priority message via uplink containing the message: [announcement_text]")
 	message_admins("[key_name(user)] sent a priority message via uplink.")
 	return source //For log icon
+
+#undef TRAITOR_ANNOUNCE_MAX_LEN
