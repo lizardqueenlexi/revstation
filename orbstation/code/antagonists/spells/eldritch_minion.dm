@@ -45,7 +45,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 /obj/item/demonology_for_dummies/proc/try_draw_rune(mob/living/user, turf/target_turf)
-	for (var/turf/nearby_turf in RANGE_TURFS(1, target_turf))
+	for (var/turf/nearby_turf as anything in RANGE_TURFS(1, target_turf))
 		if (!isopenturf(nearby_turf) || is_type_in_typecache(nearby_turf, no_draw_turfs))
 			user.balloon_alert(user, "you need a clear 3x3 area!")
 			return
