@@ -26228,7 +26228,9 @@
 /turf/open/floor/iron/white,
 /area/station/maintenance/port/greater)
 "jcl" = (
-/obj/machinery/bouldertech/refinery,
+/obj/machinery/bouldertech/refinery{
+	dir = 4
+	},
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "mining"
@@ -49921,7 +49923,9 @@
 /turf/open/floor/stone,
 /area/station/hallway/primary/starboard)
 "qWY" = (
-/obj/machinery/bouldertech/refinery/smelter,
+/obj/machinery/bouldertech/refinery/smelter{
+	dir = 4
+	},
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "mining"
