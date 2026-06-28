@@ -7044,6 +7044,7 @@
 #include "orbstation\code\antagonists\clown_operative.dm"
 #include "orbstation\code\antagonists\grand_ritual.dm"
 #include "orbstation\code\antagonists\lone_operative.dm"
+#include "orbstation\code\antagonists\mindshield.dm"
 #include "orbstation\code\antagonists\rulesets_latejoin.dm"
 #include "orbstation\code\antagonists\rulesets_midround.dm"
 #include "orbstation\code\antagonists\steal_owned_items.dm"
